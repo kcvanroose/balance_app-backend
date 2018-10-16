@@ -27,7 +27,8 @@ ActiveRecord::Schema.define(version: 2018_10_10_134227) do
   end
 
   create_table "invoices", force: :cascade do |t|
-    t.decimal "total"
+    t.integer "project_id"
+    t.bigint "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,9 +38,9 @@ ActiveRecord::Schema.define(version: 2018_10_10_134227) do
     t.integer "client_id"
     t.string "description"
     t.boolean "completed"
-    t.decimal "fee"
-    t.decimal "hourly_rate"
-    t.time "time_spent"
+    t.bigint "fee"
+    t.bigint "hourly_rate"
+    t.bigint "time_spent"
     t.datetime "start_date"
     t.datetime "end_date"
     t.datetime "created_at", null: false
@@ -49,7 +50,8 @@ ActiveRecord::Schema.define(version: 2018_10_10_134227) do
   create_table "tasks", force: :cascade do |t|
     t.string "description"
     t.datetime "due_date"
-    t.boolean "completed"
+    t.integer "project_id"
+    t.boolean "completed" 
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
