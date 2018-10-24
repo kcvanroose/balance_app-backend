@@ -1,6 +1,7 @@
 json.name @user.name
 json.username @user.username
 json.business_name @user.business_name
+json.id @user.id
 json.clients @user.clients do |client|
     json.id client.id
     json.name client.name

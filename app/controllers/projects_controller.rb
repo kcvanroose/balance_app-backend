@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
     def update
         @project = Project.find(params["id"])
-        @Project.update(project_params)
+        @project.update(project_params)
     end
 
     def new
@@ -19,6 +19,17 @@ class ProjectsController < ApplicationController
         end
     end
 
+    def delete
+        @project = Project.find(params["id"])
+        @project.destroy
+        if @project
+            render json: {status: "deleted"}
+        else
+            render json: {errors: @project.errors.full_messages}, status: :unprocessible_entity
+        end
+    end
+
+    
     private
 
     def project_params
