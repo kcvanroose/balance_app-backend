@@ -8,6 +8,7 @@ json.clients @user.clients do |client|
     json.contact client.contact
     json.phone_number client.phone_number
     json.email_address client.email_address
+    json.address client.address
     json.projects client.projects do |project|
         json.id project.id
         json.name project.name

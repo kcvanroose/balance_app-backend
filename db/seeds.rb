@@ -16,7 +16,7 @@ user = User.create ([
     {
     username: 'casey',
     password: 'casey',
-    business_name: 'casey',
+    business_name: 'Auricle',
     name: 'casey'
 },
 {
@@ -29,44 +29,71 @@ user = User.create ([
 puts User.all.length
 
 client = Client.create ([{
-    name: 'Lala',
-    address: 'lalaLand',
-    contact: 'Shela',
-    phone_number: '07937223844',
-    email_address: 'Shela@lala.com',
+    name: 'Jabbersphere',
+    address: '4442 Melvin Way',
+    contact: 'ShelaOsborn',
+    phone_number: '7642467729',
+    email_address: 'oowen0@prlog.org',
     user_id: 1
 },
 {
-    name: 'Big Client',
-    address: "Big Office",
-    contact: "Big Mama",
-    phone_number: "07989993",
-    email_address: "bigmama@bigclient.com",
-    user_id: 2
+    name: 'Babbleblab',
+    address: "48806 Bashford Place",
+    contact: "Amory",
+    phone_number: "9307888838",
+    email_address: "amyers1@163.com",
+    user_id: 1
+},
+{
+    name: 'Yabox',
+    address: "32592 Johnson Parkway",
+    contact: "Currie",
+    phone_number: "7311210279",
+    email_address: "ccowlam2@cnn.com",
+    user_id: 1
+},
+{
+    name: 'Avavee',
+    address: "214 Barby Park",
+    contact: "Betta",
+    phone_number: "5213577325",
+    email_address: "btertre3@jalbum.net",
+    user_id: 1
 }])
 
 puts Client.all.length
 
 project = Project.create ([
     {
-    name: 'Lalas project',
+    name: 'Hatity',
     client_id: 1,
-    description: 'Lalalalala',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
     completed: false,
     hourly_rate: 45.00,
     time_spent: 22,
     start_date: Date.new(2018,10,11),
-    end_date: Date.new(2018,10,11),
+    end_date: Date.new(2018,12,11),
 },{
-    name: "Test 2",
+    name: "Bigtax",
     client_id: 1,
-    description: 'Please just work!',
+    description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     hourly_rate: 4450,
-    time_spent: 0,
+    time_spent: 450,
     start_date: Date.new(2018,10,11),
-    end_date: Date.new(2018,10,11),
+    end_date: Date.new(2019,03,10),
     completed: false
-}])
+},
+{
+    name: "Span",
+    client_id: 1,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Non enim praesent elementum facilisis leo.',
+    hourly_rate: 800,
+    time_spent: 600,
+    start_date: Date.new(2018,10,11),
+    end_date: Date.new(2019,01,10),
+    completed: true
+}
+])
 
 puts Project.all.length
 
@@ -81,7 +108,7 @@ puts Invoice.all.length
 
 task = Task.create ([
     {
-        description: "something something",
+        description: " Amet commodo nulla facilisi nullam vehicula ",
         due_date: Date.new(2018,10,28),
         completed: false,
         project_id: 1
