@@ -1,4 +1,4 @@
-# Balance App (back end)
+# Balance App (back-end)
 
 A Progressive web app that helps freelancers to manage their projects.
 
