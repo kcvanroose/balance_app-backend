@@ -1,4 +1,5 @@
 class AuthController < ApplicationController
+    skip_before_action :authenticate_user!, raise: false
     
   def create
     @user = User.find_by(username: user_login_params[:username])
